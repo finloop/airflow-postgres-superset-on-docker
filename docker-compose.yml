@@ -1,9 +1,7 @@
 version: '3'
-
-
 services:
   namenode:
-    image: finloop/hadoop-namenode:0.1
+    image: finloop/hadoop-namenode:0.4
     ports:
       - 9870:9870
     networks:
@@ -21,7 +19,7 @@ services:
         condition: on-failure
 
   datanode:
-    image: finloop/hadoop-datanode:0.1
+    image: finloop/hadoop-datanode:0.4
     networks:
       - hbase
     volumes:
@@ -36,7 +34,7 @@ services:
         condition: on-failure
 
   resourcemanager:
-    image: finloop/hadoop-resourcemanager:0.1
+    image: finloop/hadoop-resourcemanager:0.4
     networks:
       - hbase
     environment:
@@ -52,7 +50,7 @@ services:
       disable: true
 
   nodemanager:
-    image: finloop/hadoop-nodemanager:0.1
+    image: finloop/hadoop-nodemanager:0.4
     networks:
       - hbase
     environment:
@@ -65,11 +63,25 @@ services:
         condition: on-failure
 
   historyserver:
-    image: finloop/hadoop-historyserver:0.1
+    image: finloop/hadoop-historyserver:0.4
     networks:
       - hbase
     volumes:
       - hadoop_historyserver:/hadoop/yarn/timeline
+    environment:
+      SERVICE_PRECONDITION: "namenode:8020 datanode:9864 resourcemanager:8088"
+    env_file:
+      - ./hadoop.env
+    deploy:
+      mode: replicated
+      replicas: 1
+
+  hive-server:
+    image: finloop/hive:0.4
+    ports:
+      - 10000:10000
+    networks:
+      - hbase
     environment:
       SERVICE_PRECONDITION: "namenode:8020 datanode:9864 resourcemanager:8088"
     env_file:
