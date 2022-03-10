@@ -69,7 +69,15 @@ x-airflow-common:
     airflow-postgres:
       condition: service_healthy
 
+
+
 services:
+  pinot:
+    image: apachepinot/pinot:0.9.3
+    command: QuickStart -type batch
+    ports:
+      - 9000:9000
+
   client-postgres:
     image: postgres:13
     environment:
