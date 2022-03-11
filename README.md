@@ -1,4 +1,8 @@
-# Airflow + Piniot + Superset
+# Airflow + Postgres + Superset
+
+## Architektura
+
+![](docs/Architecture.png)
 ## Baza klienta
 Aby korzystać z bazy klienta (nie włączająć pozostałych serwisów) należy użyć polecenia:
 ```
