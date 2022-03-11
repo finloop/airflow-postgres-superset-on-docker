@@ -169,7 +169,7 @@ services:
       POSTGRES_PASSWORD: airflow
       POSTGRES_DB: airflow
     volumes:
-      - postgres-db-volume:/var/lib/postgresql/data
+      - airflow-db-volume:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "airflow"]
       interval: 5s
@@ -362,7 +362,7 @@ services:
         condition: service_completed_successfully
 
 volumes:
-  postgres-db-volume:
+  airflow-db-volume:
   superset_home:
   db_home:
   postgres-warehouse-volume:
