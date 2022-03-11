@@ -56,9 +56,9 @@ x-airflow-common:
     AIRFLOW__API__AUTH_BACKEND: 'airflow.api.auth.backend.basic_auth'
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
   volumes:
-    - ./dags:/opt/airflow/dags
-    - ./logs:/opt/airflow/logs
-    - ./plugins:/opt/airflow/plugins
+    - ./airflow/dags:/opt/airflow/dags
+    - ./airflow/logs:/opt/airflow/logs
+    - ./airflow/plugins:/opt/airflow/plugins
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on
@@ -73,25 +73,25 @@ x-superset-depends-on: &superset-depends-on
   - redis
 x-superset-volumes: &superset-volumes
   # /app/pythonpath_docker will be appended to the PYTHONPATH in the final container
-  - ./docker:/app/docker
+  - ./superset/docker:/app/docker
   - superset_home:/app/superset_home
 
 
 services:
   superset:
-    env_file: docker/.env-non-dev
+    env_file: superset/docker/.env-non-dev
     image: *superset-image
     container_name: superset_app
     command: ["/app/docker/docker-bootstrap.sh", "app-gunicorn"]
     user: "root"
     restart: unless-stopped
     ports:
-      - 8088:8088
+      - 5054:8088
     depends_on: *superset-depends-on
     volumes: *superset-volumes
 
   db:
-    env_file: docker/.env-non-dev
+    env_file: superset/docker/.env-non-dev
     image: postgres:13
     container_name: superset_db
     restart: unless-stopped
@@ -102,7 +102,7 @@ services:
     image: *superset-image
     container_name: superset_init
     command: ["/app/docker/docker-init.sh"]
-    env_file: docker/.env-non-dev
+    env_file: superset/docker/.env-non-dev
     depends_on: *superset-depends-on
     user: "root"
     volumes: *superset-volumes
@@ -111,7 +111,7 @@ services:
     image: *superset-image
     container_name: superset_worker
     command: ["/app/docker/docker-bootstrap.sh", "worker"]
-    env_file: docker/.env-non-dev
+    env_file: superset/docker/.env-non-dev
     restart: unless-stopped
     depends_on: *superset-depends-on
     user: "root"
@@ -121,7 +121,7 @@ services:
     image: *superset-image
     container_name: superset_worker_beat
     command: ["/app/docker/docker-bootstrap.sh", "beat"]
-    env_file: docker/.env-non-dev
+    env_file: superset/docker/.env-non-dev
     restart: unless-stopped
     depends_on: *superset-depends-on
     user: "root"
@@ -330,7 +330,7 @@ services:
       _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
     user: "0:0"
     volumes:
-      - .:/sources
+      - ./airflow:/sources
 
   airflow-cli:
     <<: *airflow-common
