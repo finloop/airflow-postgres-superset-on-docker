@@ -35,8 +35,6 @@
 #                                Default: airflow
 # _PIP_ADDITIONAL_REQUIREMENTS - Additional PIP requirements to add when starting all containers.
 #                                Default: ''
-#
-# Feel free to modify this file to suit your needs.
 ---
 version: '3'
 x-airflow-common:
@@ -69,14 +67,81 @@ x-airflow-common:
     airflow-postgres:
       condition: service_healthy
 
+x-superset-image: &superset-image apache/superset:1.4.1
+x-superset-depends-on: &superset-depends-on
+  - db
+  - redis
+x-superset-volumes: &superset-volumes
+  # /app/pythonpath_docker will be appended to the PYTHONPATH in the final container
+  - ./docker:/app/docker
+  - superset_home:/app/superset_home
 
 
 services:
-  pinot:
-    image: apachepinot/pinot:0.9.3
-    command: QuickStart -type batch
+  superset:
+    env_file: docker/.env-non-dev
+    image: *superset-image
+    container_name: superset_app
+    command: ["/app/docker/docker-bootstrap.sh", "app-gunicorn"]
+    user: "root"
+    restart: unless-stopped
     ports:
-      - 9000:9000
+      - 8088:8088
+    depends_on: *superset-depends-on
+    volumes: *superset-volumes
+
+  db:
+    env_file: docker/.env-non-dev
+    image: postgres:13
+    container_name: superset_db
+    restart: unless-stopped
+    volumes:
+      - db_home:/var/lib/postgresql/data
+
+  superset-init:
+    image: *superset-image
+    container_name: superset_init
+    command: ["/app/docker/docker-init.sh"]
+    env_file: docker/.env-non-dev
+    depends_on: *superset-depends-on
+    user: "root"
+    volumes: *superset-volumes
+
+  superset-worker:
+    image: *superset-image
+    container_name: superset_worker
+    command: ["/app/docker/docker-bootstrap.sh", "worker"]
+    env_file: docker/.env-non-dev
+    restart: unless-stopped
+    depends_on: *superset-depends-on
+    user: "root"
+    volumes: *superset-volumes
+
+  superset-worker-beat:
+    image: *superset-image
+    container_name: superset_worker_beat
+    command: ["/app/docker/docker-bootstrap.sh", "beat"]
+    env_file: docker/.env-non-dev
+    restart: unless-stopped
+    depends_on: *superset-depends-on
+    user: "root"
+    volumes: *superset-volumes
+
+  warehouse-postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - 5052:5432
+    volumes:
+      - postgres-warehouse-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      retries: 5
+    restart: always
 
   client-postgres:
     image: postgres:13
@@ -84,6 +149,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
+    ports:
+      - "5051:5432"
 
   pgadmin:
     container_name: pgadmin4
@@ -124,7 +191,7 @@ services:
     <<: *airflow-common
     command: webserver
     ports:
-      - 8080:8080
+      - 5053:8080
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 10s
@@ -296,3 +363,6 @@ services:
 
 volumes:
   postgres-db-volume:
+  superset_home:
+  db_home:
+  postgres-warehouse-volume:
