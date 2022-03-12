@@ -151,6 +151,8 @@ services:
       POSTGRES_DB: postgres
     ports:
       - "5051:5432"
+    volumes:
+      - ./client-postgres-init:/docker-entrypoint-initdb.d
 
   pgadmin:
     container_name: pgadmin4
