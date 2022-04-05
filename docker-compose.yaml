@@ -141,7 +141,7 @@ services:
       test: ["CMD", "pg_isready", "-U", "postgres"]
       interval: 5s
       retries: 5
-    restart: always
+    restart: unless-stopped
 
   client-postgres:
     image: postgres:13
@@ -157,7 +157,7 @@ services:
   pgadmin:
     container_name: pgadmin4
     image: dpage/pgadmin4
-    restart: always
+    restart: unless-stopped
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: admin
@@ -176,7 +176,7 @@ services:
       test: ["CMD", "pg_isready", "-U", "airflow"]
       interval: 5s
       retries: 5
-    restart: always
+    restart: unless-stopped
 
   redis:
     image: redis:latest
@@ -187,7 +187,7 @@ services:
       interval: 5s
       timeout: 30s
       retries: 50
-    restart: always
+    restart: unless-stopped
 
   airflow-webserver:
     <<: *airflow-common
@@ -199,7 +199,7 @@ services:
       interval: 10s
       timeout: 10s
       retries: 5
-    restart: always
+    restart: unless-stopped
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -213,7 +213,7 @@ services:
       interval: 10s
       timeout: 10s
       retries: 5
-    restart: always
+    restart: unless-stopped
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -234,7 +234,7 @@ services:
       # Required to handle warm shutdown of the celery workers properly
       # See https://airflow.apache.org/docs/docker-stack/entrypoint.html#signal-propagation
       DUMB_INIT_SETSID: "0"
-    restart: always
+    restart: unless-stopped
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -251,7 +251,7 @@ services:
       interval: 10s
       timeout: 10s
       retries: 5
-    restart: always
+    restart: unless-stopped
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -357,7 +357,7 @@ services:
       interval: 10s
       timeout: 10s
       retries: 5
-    restart: always
+    restart: unless-stopped
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
