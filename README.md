@@ -4,6 +4,28 @@
 
 ![](docs/Architecture.png)
 
+## Uruchamianie
+
+```
+git clone git@github.com:finloop/airflow-postgres-superset-on-docker.git
+cd airflow-postgres-superset-on-docker
+```
+
+Do uruchomienia serwisów potrzebne będzie id aktualnego użytkownika, które należy umieścić 
+w pliku `.env` i przypisać do zmiennej `AIRFLOW_UID`. W systemie linux id aktualnego użytkownika
+można pobrać poleceniem:
+```sh
+id -u
+```
+Przykładowy plik `.env` wygląda następująco:
+```text
+AIRFLOW_UID=1000
+```
+
+I ostatecznie uruchamiamy wszystkie serwisy:
+```sh
+docker-compose up
+```
 ### Serwisy WWWW
 
 - [pgAdmin](http://localhost:5050)
