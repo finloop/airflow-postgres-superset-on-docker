@@ -26,6 +26,10 @@ I ostatecznie uruchamiamy wszystkie serwisy:
 ```sh
 docker-compose up
 ```
+Po ich uruchomieniu należy umieścić przykładowe dane w bazie. Robimy to:
+```sh
+python init-postgres.py
+```
 ### Serwisy WWWW
 
 - [pgAdmin](http://localhost:5050)
