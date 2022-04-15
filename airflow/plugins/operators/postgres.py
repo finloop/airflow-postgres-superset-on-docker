@@ -29,8 +29,7 @@ class PostgresToDataFrameOperator(BaseOperator):
     def __init__(
         self,
         table_name,
-        data,
-        connection_uri: str = "postgresql://postgres:postgres@warehouse-postgres:5432/postgres",
+        connection_uri: str = "postgresql://postgres:postgres@client-postgres:5432/postgres",
         *args,
         **kwargs
     ):
