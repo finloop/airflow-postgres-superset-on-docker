@@ -39,6 +39,18 @@ python init-postgres.py
 ### Pozostałe serwisy dostępne dla hosta
 - client-postgres: [localhost:5051]([localhost:5051])
 - warehouse-postgres: [localhost:5052]([localhost:5052])
+
+
+### Mapy w Apache Superset
+
+Aby mapyw Apache Superset działały potrzebny będzie klucz do API. Moża go 
+pozyskać za darmo tutaj: [Mapbox](www.mapbox.com/). Należy go umieścić
+w pliku `superset/docker/.env-non-dev` jako `MAPBOX_API_KEY`. W następujący
+sposób:
+``` txt
+MAPBOX_API_KEY='YOUR_API_KEY_FROM_MAPBOX1234567890'
+```
+
 ## Baza klienta
 Aby korzystać z bazy klienta (nie włączająć pozostałych serwisów) należy użyć polecenia:
 ```
