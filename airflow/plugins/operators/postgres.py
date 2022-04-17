@@ -1,6 +1,9 @@
 from airflow.models.baseoperator import BaseOperator
 
 class DataFrameToPostgresOverrideOperator(BaseOperator):
+    """
+    Saves pd.DataFrame to postgres table.
+    """
     template_fields = ('data',)
 
     def __init__(
@@ -25,6 +28,9 @@ class DataFrameToPostgresOverrideOperator(BaseOperator):
 
 
 class PostgresToDataFrameOperator(BaseOperator):
+    """
+    Load pd.DataFrame from postgres table.
+    """
 
     def __init__(
         self,
