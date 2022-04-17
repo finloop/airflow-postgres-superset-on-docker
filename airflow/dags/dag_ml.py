@@ -40,6 +40,7 @@ def train_model(Y):
         global_cost="maicc",
         fit_type="global",
     )
+    output["pred"] = "No"
     return {"model": model, "fit": output}
 
 
@@ -48,7 +49,19 @@ def predict(model, output):
     from ThymeBoost import ThymeBoost as tb
 
     predicted_output = model.predict(output, 300)
-    return predicted_output
+    output = output.reset_index()
+    predicted_output["order_purchase_timestamp"] = predicted_output.index.values
+    predicted_output["pred"] = "Yes"
+    predicted_output = predicted_output.rename(
+        columns={
+            "predictions": "y",
+            "predicted_trend": "trend",
+            "predicted_seasonality": "seasonality",
+            "predicted_upper": "yhat_upper",
+            "predicted_lower": "yhat_lower",
+        }
+    )
+    return output.merge(predicted_output, how="outer")
 
 
 @dag(
