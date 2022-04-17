@@ -1,7 +1,10 @@
 import pendulum
 from airflow.decorators import dag, task
 
-from operators.postgres import DataFrameToPostgresOverrideOperator, PostgresToDataFrameOperator
+from operators.postgres import (
+    DataFrameToPostgresOverrideOperator,
+    PostgresToDataFrameOperator,
+)
 
 
 @dag(
@@ -29,11 +32,20 @@ def orders_locations_dag():
     @task
     def fix_dates(orders):
         import pandas as pd
-        orders.order_purchase_timestamp = pd.to_datetime(orders.order_purchase_timestamp)
+
+        orders.order_purchase_timestamp = pd.to_datetime(
+            orders.order_purchase_timestamp
+        )
         orders.order_approved_at = pd.to_datetime(orders.order_purchase_timestamp)
-        orders.order_delivered_carrier_date = pd.to_datetime(orders.order_delivered_customer_date)
-        orders.order_estimated_delivery_date = pd.to_datetime(orders.order_estimated_delivery_date)
-        orders.order_delivered_customer_date = pd.to_datetime(orders.order_delivered_customer_date)
+        orders.order_delivered_carrier_date = pd.to_datetime(
+            orders.order_delivered_customer_date
+        )
+        orders.order_estimated_delivery_date = pd.to_datetime(
+            orders.order_estimated_delivery_date
+        )
+        orders.order_delivered_customer_date = pd.to_datetime(
+            orders.order_delivered_customer_date
+        )
         return orders
 
     @task
@@ -56,7 +68,7 @@ def orders_locations_dag():
 
         return geo
 
-    @task 
+    @task
     def merge(customers, orders, geolocations):
         customers_orders_geo = customers.merge(orders, on="customer_id").merge(
             geolocations,
@@ -68,7 +80,11 @@ def orders_locations_dag():
 
     fix_dates_res = fix_dates(orders.output)
     aggregate_geolocations_res = aggregate_geolocations(geolocations.output)
-    merge_res = merge(customers=customers.output, orders=fix_dates_res, geolocations=aggregate_geolocations_res)
+    merge_res = merge(
+        customers=customers.output,
+        orders=fix_dates_res,
+        geolocations=aggregate_geolocations_res,
+    )
 
     load = DataFrameToPostgresOverrideOperator(
         task_id="upload_to_postgres",

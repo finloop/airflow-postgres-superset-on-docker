@@ -1,7 +1,10 @@
 import pendulum
 from airflow.decorators import dag, task
 
-from operators.postgres import DataFrameToPostgresOverrideOperator, PostgresToDataFrameOperator
+from operators.postgres import (
+    DataFrameToPostgresOverrideOperator,
+    PostgresToDataFrameOperator,
+)
 
 
 @dag(
@@ -19,15 +22,18 @@ def top_sellers_dag():
     @task()
     def transform(df_sellers):
         import pandas as pd
+
         sellers = df_sellers
         top_sellers = sellers.seller_state.value_counts()[:5]
-        sellers.loc[~sellers.seller_state.isin(top_sellers.index), "seller_state"] = "other"
-        
+        sellers.loc[
+            ~sellers.seller_state.isin(top_sellers.index), "seller_state"
+        ] = "other"
+
         top_sellers = pd.DataFrame(sellers.seller_state.value_counts())
         top_sellers.columns = ["sellers_count"]
 
         return top_sellers
-    
+
     transformed = transform(df_sellers=sellers.output)
 
     load = DataFrameToPostgresOverrideOperator(

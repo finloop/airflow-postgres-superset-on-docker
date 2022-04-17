@@ -1,7 +1,10 @@
 import pendulum
 from airflow.decorators import dag, task
 
-from operators.postgres import DataFrameToPostgresOverrideOperator, PostgresToDataFrameOperator
+from operators.postgres import (
+    DataFrameToPostgresOverrideOperator,
+    PostgresToDataFrameOperator,
+)
 
 
 @dag(
@@ -29,7 +32,7 @@ def seller_order_items_dag():
             df_sellers, left_on="seller_id", right_on="seller_id", how="inner"
         )
         return df
-    
+
     transformed = transform(df_sellers=sellers.output, df_orders=orders.output)
 
     load = DataFrameToPostgresOverrideOperator(

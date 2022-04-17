@@ -1,11 +1,13 @@
 from airflow.exceptions import AirflowFailException
 from airflow.models.baseoperator import BaseOperator
 
+
 class DataFrameToPostgresOverrideOperator(BaseOperator):
     """
     Saves pd.DataFrame to postgres table.
     """
-    template_fields = ('data',)
+
+    template_fields = ("data",)
 
     def __init__(
         self,
@@ -13,7 +15,7 @@ class DataFrameToPostgresOverrideOperator(BaseOperator):
         data,
         connection_uri: str = "postgresql://postgres:postgres@warehouse-postgres:5432/postgres",
         *args,
-        **kwargs
+        **kwargs,
     ):
         super(DataFrameToPostgresOverrideOperator, self).__init__(*args, **kwargs)
         self.connection_uri = connection_uri
@@ -38,7 +40,7 @@ class PostgresToDataFrameOperator(BaseOperator):
         table_name,
         connection_uri: str = "postgresql://postgres:postgres@client-postgres:5432/postgres",
         *args,
-        **kwargs
+        **kwargs,
     ):
         super(PostgresToDataFrameOperator, self).__init__(*args, **kwargs)
         self.connection_uri = connection_uri
@@ -51,17 +53,17 @@ class PostgresToDataFrameOperator(BaseOperator):
         con = create_engine(self.connection_uri)
         # WARNING. Never use this in production, it can be easly exploited with
         # SQL injection.
-        df = pd.read_sql_query(f"select * from {self.table_name}",con=con)
+        df = pd.read_sql_query(f"select * from {self.table_name}", con=con)
         return df
 
-class CheckIfTableExistsOperator(BaseOperator):
 
+class CheckIfTableExistsOperator(BaseOperator):
     def __init__(
         self,
         table_name,
         connection_uri: str = "postgresql://postgres:postgres@warehouse-postgres:5432/postgres",
         *args,
-        **kwargs
+        **kwargs,
     ):
         super(CheckIfTableExistsOperator, self).__init__(*args, **kwargs)
         self.connection_uri = connection_uri
