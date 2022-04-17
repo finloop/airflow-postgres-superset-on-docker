@@ -1,6 +1,5 @@
 
-from operators.postgres import DataFrameToPostgresOverrideOperator
-from airflow.providers.postgres.operators.postgres import PostgresOperator
+from operators.postgres import CheckIfTableExistsOperator
 from airflow.decorators import dag, task
 
 import pendulum
@@ -12,15 +11,6 @@ import pendulum
     tags=["piotrek"],
 )
 def ml_dag():
-    list_tables = PostgresOperator(
-        task_id="check_if_table_exists",
-        postgres_conn_id="postgres_default",
-        sql="select * from pg_catalog.pg_tables;",
-    )
- 
-    @task()
-    def check_if_table_exists(table_list, table: str):
-        print(table_list)
-        print(type(table_list))
+    check1 = CheckIfTableExistsOperator(table_name="customers", task_id="table_customers_exist")
 
-    check_if_table_exists(table_list=list_tables.output, table="XD")
+my_dag = ml_dag()
