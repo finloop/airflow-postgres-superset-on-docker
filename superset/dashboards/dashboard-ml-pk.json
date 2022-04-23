@@ -1,0 +1,586 @@
+{
+    "dashboards": [
+        {
+            "__Dashboard__": {
+                "css": "",
+                "dashboard_title": "Model predykcji zam\u00f3wie\u0144",
+                "description": null,
+                "json_metadata": "{\"show_native_filters\": true, \"color_scheme\": \"\", \"refresh_frequency\": 0, \"expanded_slices\": {}, \"label_colors\": {}, \"timed_refresh_immune_slices\": [], \"default_filters\": \"{}\", \"chart_configuration\": {}, \"remote_id\": 16}",
+                "position_json": "{\"CHART-IQccw6qtcm\":{\"children\":[],\"id\":\"CHART-IQccw6qtcm\",\"meta\":{\"chartId\":546,\"height\":50,\"sliceName\":\"Predykcja ilo\\u015bci zam\\u00f3wie\\u0144\",\"uuid\":\"8da1a854-505a-45e4-a17b-adbfd14b641a\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-dgop2Xz_rQ\"],\"type\":\"CHART\"},\"CHART-YeV9YLPMab\":{\"children\":[],\"id\":\"CHART-YeV9YLPMab\",\"meta\":{\"chartId\":545,\"height\":50,\"sliceName\":\"Dopasowany model (ilo\\u015b\\u0107 zam\\u00f3wie\\u0144)\",\"uuid\":\"c21fb856-eeac-41c2-95d0-2de41acd3108\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-DC0x21sCJ0\"],\"type\":\"CHART\"},\"CHART-fHEPNCXO1p\":{\"children\":[],\"id\":\"CHART-fHEPNCXO1p\",\"meta\":{\"chartId\":547,\"height\":50,\"sliceName\":\"Rozbicie na trend i sezonowo\\u015b\\u0107\",\"uuid\":\"4dd09372-4b72-43ed-8468-47cd4c344759\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-hRQjlK4cN\"],\"type\":\"CHART\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"GRID_ID\":{\"children\":[\"ROW-DC0x21sCJ0\",\"ROW-hRQjlK4cN\",\"ROW-dgop2Xz_rQ\"],\"id\":\"GRID_ID\",\"parents\":[\"ROOT_ID\"],\"type\":\"GRID\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"Model predykcji zam\\u00f3wie\\u0144\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-DC0x21sCJ0\":{\"children\":[\"CHART-YeV9YLPMab\"],\"id\":\"ROW-DC0x21sCJ0\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-dgop2Xz_rQ\":{\"children\":[\"CHART-IQccw6qtcm\"],\"id\":\"ROW-dgop2Xz_rQ\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-hRQjlK4cN\":{\"children\":[\"CHART-fHEPNCXO1p\"],\"id\":\"ROW-hRQjlK4cN\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"}}",
+                "slices": [
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.fit",
+                            "datasource_type": "table",
+                            "id": 545,
+                            "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"area\": false, \"color_scheme\": \"supersetColors\", \"comparison_type\": \"percentage\", \"contributionMode\": null, \"datasource\": \"24__table\", \"extra_form_data\": {}, \"forecastEnabled\": false, \"forecastInterval\": 0.8, \"forecastPeriods\": 10, \"granularity_sqla\": \"order_purchase_timestamp\", \"groupby\": [], \"legendOrientation\": \"top\", \"legendType\": \"scroll\", \"markerEnabled\": false, \"markerSize\": 6, \"metrics\": [{\"aggregate\": \"SUM\", \"column\": {\"certification_details\": null, \"certified_by\": null, \"column_name\": \"y\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 764, \"is_certified\": false, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"BIGINT\", \"type_generic\": 0, \"verbose_name\": null, \"warning_markdown\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"Dane\", \"optionName\": \"metric_ju5lvnbd3r_uh4ph88oai\", \"sqlExpression\": null}, {\"aggregate\": null, \"column\": null, \"expressionType\": \"SQL\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"Predykcja\", \"optionName\": \"metric_d44rilrzfuf_pwplmske1za\", \"sqlExpression\": \"SUM(yhat)\"}, {\"aggregate\": \"SUM\", \"column\": {\"certification_details\": null, \"certified_by\": null, \"column_name\": \"yhat_upper\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 766, \"is_certified\": false, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DOUBLE PRECISION\", \"type_generic\": 0, \"verbose_name\": null, \"warning_markdown\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"G\\u00f3rna granica predykcji\", \"optionName\": \"metric_5fiu8o4c8wi_cbprwqrqlf5\", \"sqlExpression\": null}, {\"aggregate\": \"SUM\", \"column\": {\"certification_details\": null, \"certified_by\": null, \"column_name\": \"yhat_lower\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 767, \"is_certified\": false, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DOUBLE PRECISION\", \"type_generic\": 0, \"verbose_name\": null, \"warning_markdown\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"Dolna granica predykcji\", \"optionName\": \"metric_ib2j4xywya_ppy0mkdqpo\", \"sqlExpression\": null}], \"only_total\": true, \"opacity\": 0.2, \"order_desc\": true, \"rich_tooltip\": true, \"row_limit\": 50000, \"seriesType\": \"line\", \"show_legend\": true, \"show_value\": false, \"slice_id\": 545, \"stack\": false, \"time_grain_sqla\": \"P1D\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"tooltipTimeFormat\": \"smart_date\", \"truncateYAxis\": true, \"url_params\": {}, \"viz_type\": \"echarts_timeseries\", \"x_axis_time_format\": \"smart_date\", \"x_axis_title_margin\": 15, \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"y_axis_title_margin\": 15, \"y_axis_title_position\": \"Left\", \"remote_id\": 545, \"datasource_name\": \"fit\", \"schema\": \"public\", \"database_name\": \"warehouse\"}",
+                            "query_context": "{\"datasource\":{\"id\":24,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"granularity\":\"order_purchase_timestamp\",\"filters\":[],\"extras\":{\"time_grain_sqla\":\"P1D\",\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[],\"metrics\":[{\"aggregate\":\"SUM\",\"column\":{\"certification_details\":null,\"certified_by\":null,\"column_name\":\"y\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":764,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"BIGINT\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"isNew\":false,\"label\":\"Dane\",\"optionName\":\"metric_ju5lvnbd3r_uh4ph88oai\",\"sqlExpression\":null},{\"aggregate\":null,\"column\":null,\"expressionType\":\"SQL\",\"hasCustomLabel\":true,\"isNew\":false,\"label\":\"Predykcja\",\"optionName\":\"metric_d44rilrzfuf_pwplmske1za\",\"sqlExpression\":\"SUM(yhat)\"},{\"aggregate\":\"SUM\",\"column\":{\"certification_details\":null,\"certified_by\":null,\"column_name\":\"yhat_upper\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":766,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"DOUBLE PRECISION\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"isNew\":false,\"label\":\"G\u00f3rna granica predykcji\",\"optionName\":\"metric_5fiu8o4c8wi_cbprwqrqlf5\",\"sqlExpression\":null},{\"aggregate\":\"SUM\",\"column\":{\"certification_details\":null,\"certified_by\":null,\"column_name\":\"yhat_lower\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":767,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"DOUBLE PRECISION\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"isNew\":false,\"label\":\"Dolna granica predykcji\",\"optionName\":\"metric_ib2j4xywya_ppy0mkdqpo\",\"sqlExpression\":null}],\"orderby\":[[{\"aggregate\":\"SUM\",\"column\":{\"certification_details\":null,\"certified_by\":null,\"column_name\":\"y\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":764,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"BIGINT\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"isNew\":false,\"label\":\"Dane\",\"optionName\":\"metric_ju5lvnbd3r_uh4ph88oai\",\"sqlExpression\":null},false]],\"annotation_layers\":[],\"row_limit\":50000,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"is_timeseries\":true,\"time_offsets\":[],\"post_processing\":[null,null,null,{\"operation\":\"pivot\",\"options\":{\"index\":[\"__timestamp\"],\"columns\":[],\"aggregates\":{\"Dane\":{\"operator\":\"mean\"},\"Predykcja\":{\"operator\":\"mean\"},\"G\u00f3rna granica predykcji\":{\"operator\":\"mean\"},\"Dolna granica predykcji\":{\"operator\":\"mean\"}},\"drop_missing_columns\":false}},null,null,null]}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Dopasowany model (ilo\u015b\u0107 zam\u00f3wie\u0144)",
+                            "viz_type": "echarts_timeseries"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.predict",
+                            "datasource_type": "table",
+                            "id": 546,
+                            "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"color_scheme\": \"supersetColors\", \"comparison_type\": \"values\", \"datasource\": \"25__table\", \"extra_form_data\": {}, \"forecastInterval\": 0.8, \"forecastPeriods\": 10, \"granularity_sqla\": \"order_purchase_timestamp\", \"groupby\": [\"pred\"], \"legendOrientation\": \"top\", \"legendType\": \"scroll\", \"markerSize\": 6, \"metrics\": [{\"aggregate\": \"SUM\", \"column\": {\"certification_details\": null, \"certified_by\": null, \"column_name\": \"y\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 1601, \"is_certified\": false, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DOUBLE PRECISION\", \"type_generic\": 0, \"verbose_name\": null, \"warning_markdown\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"Predykcja\", \"optionName\": \"metric_g1wo006s5g4_5sxpmyw03kf\", \"sqlExpression\": null}, {\"aggregate\": \"SUM\", \"column\": {\"certification_details\": null, \"certified_by\": null, \"column_name\": \"yhat_upper\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 1603, \"is_certified\": false, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DOUBLE PRECISION\", \"type_generic\": 0, \"verbose_name\": null, \"warning_markdown\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"G\\u00f3rna granica predykcji\", \"optionName\": \"metric_713f7dcanzs_be4xymmnyf\", \"sqlExpression\": null}, {\"aggregate\": \"SUM\", \"column\": {\"certification_details\": null, \"certified_by\": null, \"column_name\": \"yhat_lower\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 1604, \"is_certified\": false, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DOUBLE PRECISION\", \"type_generic\": 0, \"verbose_name\": null, \"warning_markdown\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"Dolna granica predykcji\", \"optionName\": \"metric_23dk3haj634_n8148iqda2\", \"sqlExpression\": null}], \"only_total\": true, \"order_desc\": true, \"rich_tooltip\": true, \"row_limit\": 10000, \"show_legend\": true, \"slice_id\": 546, \"time_grain_sqla\": \"P1D\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"tooltipTimeFormat\": \"smart_date\", \"truncateYAxis\": true, \"url_params\": {}, \"viz_type\": \"echarts_timeseries_line\", \"x_axis_time_format\": \"smart_date\", \"x_axis_title_margin\": 15, \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"y_axis_title_margin\": 15, \"y_axis_title_position\": \"Left\", \"remote_id\": 546, \"datasource_name\": \"predict\", \"schema\": \"public\", \"database_name\": \"warehouse\"}",
+                            "query_context": "{\"datasource\":{\"id\":25,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"granularity\":\"order_purchase_timestamp\",\"filters\":[],\"extras\":{\"time_grain_sqla\":\"P1D\",\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"pred\"],\"metrics\":[{\"aggregate\":\"SUM\",\"column\":{\"certification_details\":null,\"certified_by\":null,\"column_name\":\"y\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":1601,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"DOUBLE PRECISION\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"isNew\":false,\"label\":\"Predykcja\",\"optionName\":\"metric_g1wo006s5g4_5sxpmyw03kf\",\"sqlExpression\":null},{\"aggregate\":\"SUM\",\"column\":{\"certification_details\":null,\"certified_by\":null,\"column_name\":\"yhat_upper\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":1603,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"DOUBLE PRECISION\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"isNew\":false,\"label\":\"G\u00f3rna granica predykcji\",\"optionName\":\"metric_713f7dcanzs_be4xymmnyf\",\"sqlExpression\":null},{\"aggregate\":\"SUM\",\"column\":{\"certification_details\":null,\"certified_by\":null,\"column_name\":\"yhat_lower\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":1604,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"DOUBLE PRECISION\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"isNew\":false,\"label\":\"Dolna granica predykcji\",\"optionName\":\"metric_23dk3haj634_n8148iqda2\",\"sqlExpression\":null}],\"orderby\":[[{\"aggregate\":\"SUM\",\"column\":{\"certification_details\":null,\"certified_by\":null,\"column_name\":\"y\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":1601,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"DOUBLE PRECISION\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"isNew\":false,\"label\":\"Predykcja\",\"optionName\":\"metric_g1wo006s5g4_5sxpmyw03kf\",\"sqlExpression\":null},false]],\"annotation_layers\":[],\"row_limit\":10000,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"is_timeseries\":true,\"time_offsets\":[],\"post_processing\":[null,null,null,{\"operation\":\"pivot\",\"options\":{\"index\":[\"__timestamp\"],\"columns\":[\"pred\"],\"aggregates\":{\"Predykcja\":{\"operator\":\"mean\"},\"G\u00f3rna granica predykcji\":{\"operator\":\"mean\"},\"Dolna granica predykcji\":{\"operator\":\"mean\"}},\"drop_missing_columns\":false}},null,null,null]}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Predykcja ilo\u015bci zam\u00f3wie\u0144",
+                            "viz_type": "echarts_timeseries_line"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.fit",
+                            "datasource_type": "table",
+                            "id": 547,
+                            "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"color_scheme\": \"echarts4Colors\", \"comparison_type\": \"values\", \"datasource\": \"24__table\", \"extra_form_data\": {}, \"forecastInterval\": 0.8, \"forecastPeriods\": 10, \"granularity_sqla\": \"order_purchase_timestamp\", \"groupby\": [], \"legendOrientation\": \"top\", \"legendType\": \"scroll\", \"logAxis\": false, \"markerSize\": 6, \"metrics\": [{\"aggregate\": \"SUM\", \"column\": {\"certification_details\": null, \"certified_by\": null, \"column_name\": \"seasonality\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 768, \"is_certified\": false, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DOUBLE PRECISION\", \"type_generic\": 0, \"verbose_name\": null, \"warning_markdown\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"Sezonowo\\u015b\\u0107\", \"optionName\": \"metric_pc20ofydjhk_x6bzbe52hh\", \"sqlExpression\": null}, {\"aggregate\": \"SUM\", \"column\": {\"certification_details\": null, \"certified_by\": null, \"column_name\": \"trend\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 769, \"is_certified\": false, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DOUBLE PRECISION\", \"type_generic\": 0, \"verbose_name\": null, \"warning_markdown\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"Trend\", \"optionName\": \"metric_zyfvgoexb6o_72a7ecjs2y4\", \"sqlExpression\": null}], \"minorSplitLine\": false, \"only_total\": true, \"order_desc\": true, \"rich_tooltip\": true, \"row_limit\": 10000, \"show_legend\": true, \"slice_id\": 547, \"time_grain_sqla\": \"P1D\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"tooltipTimeFormat\": \"smart_date\", \"truncateYAxis\": true, \"url_params\": {}, \"viz_type\": \"echarts_timeseries_line\", \"x_axis_time_format\": \"smart_date\", \"x_axis_title_margin\": 15, \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"y_axis_title_margin\": 15, \"y_axis_title_position\": \"Left\", \"zoomable\": false, \"remote_id\": 547, \"datasource_name\": \"fit\", \"schema\": \"public\", \"database_name\": \"warehouse\"}",
+                            "query_context": "{\"datasource\":{\"id\":24,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"granularity\":\"order_purchase_timestamp\",\"filters\":[],\"extras\":{\"time_grain_sqla\":\"P1D\",\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[],\"metrics\":[{\"aggregate\":\"SUM\",\"column\":{\"certification_details\":null,\"certified_by\":null,\"column_name\":\"seasonality\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":768,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"DOUBLE PRECISION\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"isNew\":false,\"label\":\"Sezonowo\u015b\u0107\",\"optionName\":\"metric_pc20ofydjhk_x6bzbe52hh\",\"sqlExpression\":null},{\"aggregate\":\"SUM\",\"column\":{\"certification_details\":null,\"certified_by\":null,\"column_name\":\"trend\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":769,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"DOUBLE PRECISION\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"isNew\":false,\"label\":\"Trend\",\"optionName\":\"metric_zyfvgoexb6o_72a7ecjs2y4\",\"sqlExpression\":null}],\"orderby\":[[{\"aggregate\":\"SUM\",\"column\":{\"certification_details\":null,\"certified_by\":null,\"column_name\":\"seasonality\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":768,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"DOUBLE PRECISION\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":true,\"isNew\":false,\"label\":\"Sezonowo\u015b\u0107\",\"optionName\":\"metric_pc20ofydjhk_x6bzbe52hh\",\"sqlExpression\":null},false]],\"annotation_layers\":[],\"row_limit\":10000,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"is_timeseries\":true,\"time_offsets\":[],\"post_processing\":[null,null,null,{\"operation\":\"pivot\",\"options\":{\"index\":[\"__timestamp\"],\"columns\":[],\"aggregates\":{\"Sezonowo\u015b\u0107\":{\"operator\":\"mean\"},\"Trend\":{\"operator\":\"mean\"}},\"drop_missing_columns\":false}},null,null,null]}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Rozbicie na trend i sezonowo\u015b\u0107",
+                            "viz_type": "echarts_timeseries_line"
+                        }
+                    }
+                ],
+                "slug": null
+            }
+        }
+    ],
+    "datasources": [
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T17:56:36"
+                            },
+                            "column_name": "predicted_exogenous",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:50"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": "{}",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 774,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 25,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "219dc533-a324-42de-9eda-15f85b347ac4",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T17:56:36"
+                            },
+                            "column_name": "order_purchase_timestamp",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T17:56:36"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": "{}",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1600,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 25,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "818d9d98-45c2-49c9-ae45-892e6401aaca",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T18:51:52"
+                            },
+                            "column_name": "index",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:50"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": "{}",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 770,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 25,
+                            "type": "BIGINT",
+                            "uuid": "1793d034-3085-4234-9b53-c4db6e5500cf",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T18:49:51"
+                            },
+                            "column_name": "y",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T18:49:51"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": "{}",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1601,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 25,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "6c6b1a3b-3195-44e1-8e1d-f22be52e55a5",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T18:49:51"
+                            },
+                            "column_name": "yhat",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T18:49:51"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": "{}",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1602,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 25,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "b0503b1d-3394-412a-8067-f1f00a2eef95",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T18:49:51"
+                            },
+                            "column_name": "yhat_upper",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T18:49:51"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": "{}",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1603,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 25,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "fd659f9e-30cd-4ea8-bd6a-bb413e4b00dd",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T18:49:51"
+                            },
+                            "column_name": "yhat_lower",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T18:49:51"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": "{}",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1604,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 25,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "a7058a7d-16c1-4c2d-80ee-aaf1290bd974",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T18:49:51"
+                            },
+                            "column_name": "seasonality",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T18:49:51"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": "{}",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1605,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 25,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "0f8aeedb-e2bd-4f72-95d6-a26d2531513f",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T18:49:51"
+                            },
+                            "column_name": "trend",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T18:49:51"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": "{}",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1606,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 25,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "60c533cb-72ad-489f-a62d-3bbe5f4ef78f",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T18:49:51"
+                            },
+                            "column_name": "pred",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T18:49:51"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": "{}",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1607,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 25,
+                            "type": "TEXT",
+                            "uuid": "ae9c76c0-081b-4def-9438-07c7e8b20c64",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "index",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T17:56:36"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:50"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": "{\"warning_markdown\":\"\"}",
+                            "id": 32,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 25,
+                            "uuid": "487bc43b-f1b8-4d2f-9571-496c7306a930",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 25, \"database_name\": \"warehouse\"}",
+                "schema": "public",
+                "sql": "",
+                "table_name": "predict",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "column_name": "order_purchase_timestamp",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 763,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "b2b547d0-98fc-4e59-b804-3361476c95e5",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "column_name": "y",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 764,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "BIGINT",
+                            "uuid": "40baf310-b4cf-4a9b-a773-243ed3754e8f",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "column_name": "yhat",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 765,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "a599379d-b753-45eb-b124-93dbac6a82d7",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "column_name": "yhat_upper",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 766,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "81463a43-3c86-4855-94a4-b4a5edc48fa0",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "column_name": "yhat_lower",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 767,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "d1c08673-d981-4811-9364-df87f192b6ca",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "column_name": "seasonality",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 768,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "427150df-7192-45e7-8421-b6dc14b29831",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "column_name": "trend",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 769,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "7f8f1b17-626f-4795-bb2b-4ca98ce5ed2d",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "order_purchase_timestamp",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 31,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 24,
+                            "uuid": "517498dd-2b9b-4af5-ad7f-13e9ee3f23c2",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 24, \"database_name\": \"warehouse\"}",
+                "schema": "public",
+                "sql": null,
+                "table_name": "fit",
+                "template_params": null
+            }
+        }
+    ]
+}

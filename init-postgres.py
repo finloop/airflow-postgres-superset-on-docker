@@ -2,6 +2,8 @@ from collections import _OrderedDictItemsView
 import pandas as pd
 from sqlalchemy import create_engine
 
+print("Reading csv files ...")
+
 customers = pd.read_csv("datasets/olist_customers_dataset.csv")
 
 geolocation = pd.read_csv("datasets/olist_geolocation_dataset.csv")
@@ -20,9 +22,11 @@ sellers = pd.read_csv("datasets/olist_sellers_dataset.csv")
 
 product_category_names = pd.read_csv("datasets/product_category_name_translation.csv")
 
+print("Connecting to databse ...")
 
 engine = create_engine('postgresql://postgres:postgres@localhost:5051/postgres')
 
+print("Inserting data ...")
 
 customers.to_sql(
     'customers', 
@@ -87,3 +91,4 @@ product_category_names.to_sql(
     index=False
 )
 
+print("Done. Have a nive day!")

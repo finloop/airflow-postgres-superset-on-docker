@@ -1,0 +1,1615 @@
+{
+    "dashboards": [
+        {
+            "__Dashboard__": {
+                "css": "",
+                "dashboard_title": "PK-Olist-EDA",
+                "description": null,
+                "json_metadata": "{\"show_native_filters\": true, \"color_scheme\": \"\", \"refresh_frequency\": 0, \"expanded_slices\": {}, \"label_colors\": {}, \"timed_refresh_immune_slices\": [], \"default_filters\": \"{}\", \"chart_configuration\": {}, \"remote_id\": 13}",
+                "position_json": "{\"CHART-WcyBuJprLt\":{\"children\":[],\"id\":\"CHART-WcyBuJprLt\",\"meta\":{\"chartId\":537,\"height\":50,\"sliceName\":\"Zam\\u00f3wienia w stanach\",\"uuid\":\"b28131fb-d18f-41ab-8e84-775abce7970b\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"TABS-VTxR5c61AY\",\"TAB-QMX9Y8NsJ\",\"ROW-Kv8v4trUWD\"],\"type\":\"CHART\"},\"CHART-Xfhv-nQYJb\":{\"children\":[],\"id\":\"CHART-Xfhv-nQYJb\",\"meta\":{\"chartId\":405,\"height\":89,\"sliceName\":\"Mapa zam\\u00f3wie\\u0144\",\"uuid\":\"43c3ed05-f247-4bb8-9076-950574df88ce\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"TABS-VTxR5c61AY\",\"TAB-YHYOqz6tDs\",\"ROW-5EOX4JKY4d\"],\"type\":\"CHART\"},\"CHART-lyHRuotxy7\":{\"children\":[],\"id\":\"CHART-lyHRuotxy7\",\"meta\":{\"chartId\":404,\"height\":50,\"sliceName\":\"Ilo\\u015b\\u0107 powracaj\\u0105cych klient\\u00f3w\",\"uuid\":\"ddc6d7b9-d492-4528-9a51-de0c12d04425\",\"width\":6},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"TABS-VTxR5c61AY\",\"TAB-QMX9Y8NsJ\",\"ROW-WVamaS8D8Z\"],\"type\":\"CHART\"},\"CHART-maETVbKunZ\":{\"children\":[],\"id\":\"CHART-maETVbKunZ\",\"meta\":{\"chartId\":536,\"height\":67,\"sliceName\":\"Ile klient\\u00f3w z liczb\\u0105 zam\\u00f3wien\",\"uuid\":\"c7962eca-d7a2-4738-bff8-3741ea82178d\",\"width\":6},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"TABS-VTxR5c61AY\",\"TAB-SkZNi4GS7\",\"ROW-oPNqwrGZHf\"],\"type\":\"CHART\"},\"CHART-sSXCy0fGe0\":{\"children\":[],\"id\":\"CHART-sSXCy0fGe0\",\"meta\":{\"chartId\":538,\"height\":67,\"sliceName\":\"Histogram cen zam\\u00f3wie\\u0144\",\"uuid\":\"cae686e5-ea77-47db-a719-4c04002616a8\",\"width\":6},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"TABS-VTxR5c61AY\",\"TAB-SkZNi4GS7\",\"ROW-oPNqwrGZHf\"],\"type\":\"CHART\"},\"CHART-yISjHMoPYT\":{\"children\":[],\"id\":\"CHART-yISjHMoPYT\",\"meta\":{\"chartId\":403,\"height\":50,\"sliceName\":\"Ilo\\u015b\\u0107 zam\\u00f3wie\\u0144\",\"uuid\":\"c787839f-0771-48fd-a2f1-dbb9a7cfc9be\",\"width\":6},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"TABS-VTxR5c61AY\",\"TAB-QMX9Y8NsJ\",\"ROW-WVamaS8D8Z\"],\"type\":\"CHART\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"GRID_ID\":{\"children\":[\"TABS-VTxR5c61AY\"],\"id\":\"GRID_ID\",\"parents\":[\"ROOT_ID\"],\"type\":\"GRID\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"PK-Olist-EDA\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-5EOX4JKY4d\":{\"children\":[\"CHART-Xfhv-nQYJb\"],\"id\":\"ROW-5EOX4JKY4d\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"TABS-VTxR5c61AY\",\"TAB-YHYOqz6tDs\"],\"type\":\"ROW\"},\"ROW-Kv8v4trUWD\":{\"children\":[\"CHART-WcyBuJprLt\"],\"id\":\"ROW-Kv8v4trUWD\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"TABS-VTxR5c61AY\",\"TAB-QMX9Y8NsJ\"],\"type\":\"ROW\"},\"ROW-WVamaS8D8Z\":{\"children\":[\"CHART-lyHRuotxy7\",\"CHART-yISjHMoPYT\"],\"id\":\"ROW-WVamaS8D8Z\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"TABS-VTxR5c61AY\",\"TAB-QMX9Y8NsJ\"],\"type\":\"ROW\"},\"ROW-oPNqwrGZHf\":{\"children\":[\"CHART-sSXCy0fGe0\",\"CHART-maETVbKunZ\"],\"id\":\"ROW-oPNqwrGZHf\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"TABS-VTxR5c61AY\",\"TAB-SkZNi4GS7\"],\"type\":\"ROW\"},\"TAB-QMX9Y8NsJ\":{\"children\":[\"ROW-Kv8v4trUWD\",\"ROW-WVamaS8D8Z\"],\"id\":\"TAB-QMX9Y8NsJ\",\"meta\":{\"defaultText\":\"Tab title\",\"placeholder\":\"Tab title\",\"text\":\"Szeregi czasowe\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"TABS-VTxR5c61AY\"],\"type\":\"TAB\"},\"TAB-SkZNi4GS7\":{\"children\":[\"ROW-oPNqwrGZHf\"],\"id\":\"TAB-SkZNi4GS7\",\"meta\":{\"defaultText\":\"Tab title\",\"placeholder\":\"Tab title\",\"text\":\"Wykresy\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"TABS-VTxR5c61AY\"],\"type\":\"TAB\"},\"TAB-YHYOqz6tDs\":{\"children\":[\"ROW-5EOX4JKY4d\"],\"id\":\"TAB-YHYOqz6tDs\",\"meta\":{\"defaultText\":\"Tab title\",\"placeholder\":\"Tab title\",\"text\":\"Mapy\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"TABS-VTxR5c61AY\"],\"type\":\"TAB\"},\"TABS-VTxR5c61AY\":{\"children\":[\"TAB-YHYOqz6tDs\",\"TAB-SkZNi4GS7\",\"TAB-QMX9Y8NsJ\"],\"id\":\"TABS-VTxR5c61AY\",\"meta\":{},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"TABS\"}}",
+                "slices": [
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.fit",
+                            "datasource_type": "table",
+                            "id": 403,
+                            "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"color_scheme\": \"supersetColors\", \"comparison_type\": \"values\", \"datasource\": \"24__table\", \"extra_form_data\": {}, \"forecastInterval\": 0.8, \"forecastPeriods\": 10, \"granularity_sqla\": \"order_purchase_timestamp\", \"groupby\": [], \"legendOrientation\": \"top\", \"legendType\": \"scroll\", \"markerSize\": 6, \"metrics\": [{\"aggregate\": \"SUM\", \"column\": {\"certification_details\": null, \"certified_by\": null, \"column_name\": \"y\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 764, \"is_certified\": false, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"BIGINT\", \"type_generic\": 0, \"verbose_name\": null, \"warning_markdown\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"SUM(y)\", \"optionName\": \"metric_dwlxf4vb37c_8uz9tc6so6t\", \"sqlExpression\": null}], \"only_total\": true, \"order_desc\": true, \"rich_tooltip\": true, \"rolling_type\": null, \"row_limit\": 10000, \"time_grain_sqla\": \"P1D\", \"time_range\": \"2017 : 2019\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"tooltipTimeFormat\": \"smart_date\", \"truncateYAxis\": true, \"url_params\": {}, \"viz_type\": \"echarts_timeseries_line\", \"x_axis_time_format\": \"smart_date\", \"x_axis_title_margin\": 15, \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"y_axis_title_margin\": 15, \"y_axis_title_position\": \"Left\", \"remote_id\": 403, \"datasource_name\": \"fit\", \"schema\": \"public\", \"database_name\": \"warehouse\"}",
+                            "query_context": "{\"datasource\":{\"id\":24,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"2017 : 2019\",\"granularity\":\"order_purchase_timestamp\",\"filters\":[],\"extras\":{\"time_grain_sqla\":\"P1D\",\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[],\"metrics\":[{\"expressionType\":\"SIMPLE\",\"column\":{\"id\":764,\"column_name\":\"y\",\"verbose_name\":null,\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"is_dttm\":false,\"type\":\"BIGINT\",\"type_generic\":0,\"python_date_format\":null,\"is_certified\":false,\"certified_by\":null,\"certification_details\":null,\"warning_markdown\":null},\"aggregate\":\"SUM\",\"sqlExpression\":null,\"isNew\":false,\"hasCustomLabel\":false,\"label\":\"SUM(y)\",\"optionName\":\"metric_dwlxf4vb37c_8uz9tc6so6t\"}],\"orderby\":[[{\"expressionType\":\"SIMPLE\",\"column\":{\"id\":764,\"column_name\":\"y\",\"verbose_name\":null,\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"is_dttm\":false,\"type\":\"BIGINT\",\"type_generic\":0,\"python_date_format\":null,\"is_certified\":false,\"certified_by\":null,\"certification_details\":null,\"warning_markdown\":null},\"aggregate\":\"SUM\",\"sqlExpression\":null,\"isNew\":false,\"hasCustomLabel\":false,\"label\":\"SUM(y)\",\"optionName\":\"metric_dwlxf4vb37c_8uz9tc6so6t\"},false]],\"annotation_layers\":[],\"row_limit\":10000,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"is_timeseries\":true,\"time_offsets\":[],\"post_processing\":[null,null,null,{\"operation\":\"pivot\",\"options\":{\"index\":[\"__timestamp\"],\"columns\":[],\"aggregates\":{\"SUM(y)\":{\"operator\":\"mean\"}},\"drop_missing_columns\":false}},null,null,null]}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Ilo\u015b\u0107 zam\u00f3wie\u0144",
+                            "viz_type": "echarts_timeseries_line"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.customers",
+                            "datasource_type": "table",
+                            "id": 404,
+                            "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"color_scheme\": \"supersetColors\", \"comparison_type\": \"values\", \"datasource\": \"26__table\", \"extra_form_data\": {}, \"forecastInterval\": 0.8, \"forecastPeriods\": 10, \"granularity_sqla\": \"order_purchase_timestamp\", \"groupby\": [], \"legendOrientation\": \"top\", \"legendType\": \"scroll\", \"markerSize\": 6, \"metrics\": [{\"aggregate\": \"SUM\", \"column\": {\"certification_details\": null, \"certified_by\": null, \"column_name\": \"returing\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 790, \"is_certified\": false, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INTEGER\", \"type_generic\": 0, \"verbose_name\": null, \"warning_markdown\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"SUM(returing)\", \"optionName\": \"metric_evl0tixe7br_7v58g7dlnyv\", \"sqlExpression\": null}], \"only_total\": true, \"order_desc\": true, \"rich_tooltip\": true, \"row_limit\": 10000, \"time_grain_sqla\": \"P1D\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"tooltipTimeFormat\": \"smart_date\", \"truncateYAxis\": true, \"url_params\": {}, \"viz_type\": \"echarts_timeseries_line\", \"x_axis_time_format\": \"smart_date\", \"x_axis_title_margin\": 15, \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"y_axis_title_margin\": 15, \"y_axis_title_position\": \"Left\", \"remote_id\": 404, \"datasource_name\": \"customers\", \"schema\": \"public\", \"database_name\": \"warehouse\"}",
+                            "query_context": "{\"datasource\":{\"id\":26,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"granularity\":\"order_purchase_timestamp\",\"filters\":[],\"extras\":{\"time_grain_sqla\":\"P1D\",\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[],\"metrics\":[{\"expressionType\":\"SIMPLE\",\"column\":{\"id\":790,\"column_name\":\"returing\",\"verbose_name\":null,\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"is_dttm\":false,\"type\":\"INTEGER\",\"type_generic\":0,\"python_date_format\":null,\"is_certified\":false,\"certified_by\":null,\"certification_details\":null,\"warning_markdown\":null},\"aggregate\":\"SUM\",\"sqlExpression\":null,\"isNew\":false,\"hasCustomLabel\":false,\"label\":\"SUM(returing)\",\"optionName\":\"metric_evl0tixe7br_7v58g7dlnyv\"}],\"orderby\":[[{\"expressionType\":\"SIMPLE\",\"column\":{\"id\":790,\"column_name\":\"returing\",\"verbose_name\":null,\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"is_dttm\":false,\"type\":\"INTEGER\",\"type_generic\":0,\"python_date_format\":null,\"is_certified\":false,\"certified_by\":null,\"certification_details\":null,\"warning_markdown\":null},\"aggregate\":\"SUM\",\"sqlExpression\":null,\"isNew\":false,\"hasCustomLabel\":false,\"label\":\"SUM(returing)\",\"optionName\":\"metric_evl0tixe7br_7v58g7dlnyv\"},false]],\"annotation_layers\":[],\"row_limit\":10000,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"is_timeseries\":true,\"time_offsets\":[],\"post_processing\":[null,null,null,{\"operation\":\"pivot\",\"options\":{\"index\":[\"__timestamp\"],\"columns\":[],\"aggregates\":{\"SUM(returing)\":{\"operator\":\"mean\"}},\"drop_missing_columns\":false}},null,null,null]}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Ilo\u015b\u0107 powracaj\u0105cych klient\u00f3w",
+                            "viz_type": "echarts_timeseries_line"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.orders_locations",
+                            "datasource_type": "table",
+                            "id": 405,
+                            "params": "{\"adhoc_filters\": [], \"autozoom\": true, \"color_picker\": {\"a\": 1, \"b\": 85, \"g\": 67, \"r\": 224}, \"color_scheme\": \"supersetColors\", \"datasource\": \"28__table\", \"extra_form_data\": {}, \"filter_nulls\": true, \"granularity\": null, \"granularity_sqla\": \"order_purchase_timestamp\", \"js_columns\": [], \"legend_format\": [\"SMART_NUMBER\", \"Adaptative formating\"], \"legend_position\": \"tr\", \"mapbox_style\": \"mapbox://styles/mapbox/satellite-v9\", \"max_radius\": 250, \"min_radius\": 2, \"multiplier\": 1, \"point_radius_fixed\": {\"type\": \"fix\", \"value\": 1000}, \"point_unit\": \"square_m\", \"row_limit\": 10000, \"slice_id\": 405, \"spatial\": {\"latCol\": \"lat\", \"lonCol\": \"lon\", \"type\": \"latlong\"}, \"time_grain_sqla\": null, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viewport\": {\"altitude\": 1.5, \"bearing\": 0, \"height\": 482, \"latitude\": -18.91975790530993, \"longitude\": -24.410068298198727, \"maxPitch\": 60, \"maxZoom\": 20, \"minPitch\": 0, \"minZoom\": 0, \"pitch\": 0, \"width\": 1249, \"zoom\": 1.937647483553265}, \"viz_type\": \"deck_scatter\", \"remote_id\": 405, \"datasource_name\": \"orders_locations\", \"schema\": \"public\", \"database_name\": \"warehouse\"}",
+                            "query_context": "{\"datasource\":{\"id\":28,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"filters\":[],\"extras\":{\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[],\"metrics\":[],\"annotation_layers\":[],\"row_limit\":10000,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Mapa zam\u00f3wie\u0144",
+                            "viz_type": "deck_scatter"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.group_by_order_count_result",
+                            "datasource_type": "table",
+                            "id": 536,
+                            "params": "{\"adhoc_filters\": [], \"bottom_margin\": \"auto\", \"color_scheme\": \"supersetColors\", \"columns\": [], \"datasource\": \"27__table\", \"extra_form_data\": {}, \"groupby\": [\"index\"], \"metrics\": [{\"aggregate\": \"SUM\", \"column\": {\"certification_details\": null, \"certified_by\": null, \"column_name\": \"number_of_customers\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 792, \"is_certified\": false, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"BIGINT\", \"type_generic\": 0, \"verbose_name\": null, \"warning_markdown\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"SUM(number_of_customers)\", \"optionName\": \"metric_o777jn073o_c7l72utpvaq\", \"sqlExpression\": null}], \"order_desc\": true, \"row_limit\": 100, \"show_legend\": true, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 536, \"datasource_name\": \"group_by_order_count_result\", \"schema\": \"public\", \"database_name\": \"warehouse\"}",
+                            "query_context": "{\"datasource\":{\"id\":27,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"filters\":[],\"extras\":{\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"index\"],\"metrics\":[{\"expressionType\":\"SIMPLE\",\"column\":{\"id\":792,\"column_name\":\"number_of_customers\",\"verbose_name\":null,\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"is_dttm\":false,\"type\":\"BIGINT\",\"type_generic\":0,\"python_date_format\":null,\"is_certified\":false,\"certified_by\":null,\"certification_details\":null,\"warning_markdown\":null},\"aggregate\":\"SUM\",\"sqlExpression\":null,\"isNew\":false,\"hasCustomLabel\":false,\"label\":\"SUM(number_of_customers)\",\"optionName\":\"metric_o777jn073o_c7l72utpvaq\"}],\"annotation_layers\":[],\"row_limit\":100,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Ile klient\u00f3w z liczb\u0105 zam\u00f3wien",
+                            "viz_type": "dist_bar"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.customers",
+                            "datasource_type": "table",
+                            "id": 537,
+                            "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"color_scheme\": \"d3Category20\", \"comparison_type\": \"values\", \"datasource\": \"26__table\", \"extra_form_data\": {}, \"forecastInterval\": 0.8, \"forecastPeriods\": 10, \"granularity_sqla\": \"order_purchase_timestamp\", \"groupby\": [\"customer_state\"], \"legendOrientation\": \"top\", \"legendType\": \"scroll\", \"logAxis\": false, \"markerEnabled\": false, \"markerSize\": 6, \"metrics\": [{\"aggregate\": \"COUNT\", \"column\": {\"certification_details\": null, \"certified_by\": null, \"column_name\": \"index\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 777, \"is_certified\": false, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"BIGINT\", \"type_generic\": 0, \"verbose_name\": null, \"warning_markdown\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"COUNT(index)\", \"optionName\": \"metric_2nbewl7h66n_ybeby0eh4r\", \"sqlExpression\": null}], \"only_total\": true, \"order_desc\": true, \"rich_tooltip\": true, \"row_limit\": 10000, \"show_legend\": true, \"show_value\": false, \"stack\": false, \"time_grain_sqla\": \"P1D\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"tooltipTimeFormat\": \"smart_date\", \"truncateYAxis\": true, \"url_params\": {}, \"viz_type\": \"echarts_timeseries_line\", \"x_axis_time_format\": \"smart_date\", \"x_axis_title\": \"Czas\", \"x_axis_title_margin\": 50, \"y_axis_bounds\": [null, 300], \"y_axis_format\": \"SMART_NUMBER\", \"y_axis_title\": \"Liczba zam\\u00f3wie\\u0144\", \"y_axis_title_margin\": 30, \"y_axis_title_position\": \"Left\", \"zoomable\": true, \"remote_id\": 537, \"datasource_name\": \"customers\", \"schema\": \"public\", \"database_name\": \"warehouse\"}",
+                            "query_context": "{\"datasource\":{\"id\":26,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"granularity\":\"order_purchase_timestamp\",\"filters\":[],\"extras\":{\"time_grain_sqla\":\"P1D\",\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"customer_state\"],\"metrics\":[{\"expressionType\":\"SIMPLE\",\"column\":{\"id\":777,\"column_name\":\"index\",\"verbose_name\":null,\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"is_dttm\":false,\"type\":\"BIGINT\",\"type_generic\":0,\"python_date_format\":null,\"is_certified\":false,\"certified_by\":null,\"certification_details\":null,\"warning_markdown\":null},\"aggregate\":\"COUNT\",\"sqlExpression\":null,\"isNew\":false,\"hasCustomLabel\":false,\"label\":\"COUNT(index)\",\"optionName\":\"metric_2nbewl7h66n_ybeby0eh4r\"}],\"orderby\":[[{\"expressionType\":\"SIMPLE\",\"column\":{\"id\":777,\"column_name\":\"index\",\"verbose_name\":null,\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"is_dttm\":false,\"type\":\"BIGINT\",\"type_generic\":0,\"python_date_format\":null,\"is_certified\":false,\"certified_by\":null,\"certification_details\":null,\"warning_markdown\":null},\"aggregate\":\"COUNT\",\"sqlExpression\":null,\"isNew\":false,\"hasCustomLabel\":false,\"label\":\"COUNT(index)\",\"optionName\":\"metric_2nbewl7h66n_ybeby0eh4r\"},false]],\"annotation_layers\":[],\"row_limit\":10000,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"is_timeseries\":true,\"time_offsets\":[],\"post_processing\":[null,null,null,{\"operation\":\"pivot\",\"options\":{\"index\":[\"__timestamp\"],\"columns\":[\"customer_state\"],\"aggregates\":{\"COUNT(index)\":{\"operator\":\"mean\"}},\"drop_missing_columns\":false}},null,null,null]}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Zam\u00f3wienia w stanach",
+                            "viz_type": "echarts_timeseries_line"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.sellers_orders",
+                            "datasource_type": "table",
+                            "id": 538,
+                            "params": "{\"adhoc_filters\": [{\"clause\": \"WHERE\", \"comparator\": \"800\", \"expressionType\": \"SIMPLE\", \"filterOptionName\": \"filter_skb7xo7dhz8_me5zp5wbymn\", \"isExtra\": false, \"isNew\": false, \"operator\": \"<\", \"operatorId\": \"LESS_THAN\", \"sqlExpression\": null, \"subject\": \"price\"}], \"all_columns_x\": [\"price\"], \"color_scheme\": \"lyftColors\", \"cumulative\": false, \"datasource\": \"53__table\", \"extra_form_data\": {}, \"granularity_sqla\": null, \"groupby\": [], \"link_length\": \"100\", \"normalized\": false, \"row_limit\": 50000, \"show_legend\": false, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"histogram\", \"remote_id\": 538, \"datasource_name\": \"sellers_orders\", \"schema\": \"public\", \"database_name\": \"warehouse\"}",
+                            "query_context": "{\"datasource\":{\"id\":53,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"granularity\":null,\"filters\":[{\"col\":\"price\",\"op\":\"<\",\"val\":\"800\"}],\"extras\":{\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[],\"metrics\":[],\"annotation_layers\":[],\"row_limit\":50000,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Histogram cen zam\u00f3wie\u0144",
+                            "viz_type": "histogram"
+                        }
+                    }
+                ],
+                "slug": null
+            }
+        }
+    ],
+    "datasources": [
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "column_name": "index",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1573,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 53,
+                            "type": "BIGINT",
+                            "uuid": "a8079647-ff92-4885-9e2f-c27677dc4b78",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "column_name": "order_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1574,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 53,
+                            "type": "TEXT",
+                            "uuid": "9b2a5269-25c1-4c56-822f-006c41875055",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "column_name": "order_item_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1575,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 53,
+                            "type": "BIGINT",
+                            "uuid": "aa43f156-79f2-4557-ad5c-f89a812a2776",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "column_name": "product_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1576,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 53,
+                            "type": "TEXT",
+                            "uuid": "cb0b140e-96a9-413d-9b46-3d225f87da3a",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "column_name": "seller_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1577,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 53,
+                            "type": "TEXT",
+                            "uuid": "9d2959c4-7eca-4903-8796-570bb3a613fe",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "column_name": "shipping_limit_date",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1578,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 53,
+                            "type": "TEXT",
+                            "uuid": "03c910dc-aab0-4482-9b5c-da64b517ce36",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "column_name": "price",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1579,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 53,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "51443901-5642-4ca2-8a9e-dd0f43b90b71",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "column_name": "freight_value",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1580,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 53,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "28e5a73b-f428-4229-b771-cdcd1ec65240",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "column_name": "seller_zip_code_prefix",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1581,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 53,
+                            "type": "BIGINT",
+                            "uuid": "6d62de35-f292-4f69-963e-11bb89302e5c",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "column_name": "seller_city",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1582,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 53,
+                            "type": "TEXT",
+                            "uuid": "fc0b2069-a02b-4094-b41e-aa9231784fd6",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "column_name": "seller_state",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 1583,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 53,
+                            "type": "TEXT",
+                            "uuid": "7801a0ba-570b-4a0d-a001-bb3ed0a21d30",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:48:50"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 67,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 53,
+                            "uuid": "405706e6-60fb-4d7d-8d6b-a66adda18a2a",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 53, \"database_name\": \"warehouse\"}",
+                "schema": "public",
+                "sql": null,
+                "table_name": "sellers_orders",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "index",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 793,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "BIGINT",
+                            "uuid": "cbaa07a3-3640-4348-aba2-615d55f71cd3",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "customer_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 794,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "TEXT",
+                            "uuid": "32a66c5f-4131-4169-884d-a16471a5357a",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "customer_unique_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 795,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "TEXT",
+                            "uuid": "7a492564-4b44-443e-996a-381b33c3d16d",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "customer_zip_code_prefix",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 796,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "BIGINT",
+                            "uuid": "f5d33d00-1b41-489c-b025-097a6b5a0671",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "customer_city",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 797,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "TEXT",
+                            "uuid": "d4a87bd0-9859-4c69-a9bb-129cead68190",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "customer_state",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 798,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "TEXT",
+                            "uuid": "9f9f4222-1e7e-4e13-ae7e-c1ad571726d0",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "order_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 799,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "TEXT",
+                            "uuid": "3f277765-7e52-417b-995a-3441940293e0",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "order_status",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 800,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "TEXT",
+                            "uuid": "673ca572-9e1d-4b9b-b0f8-6fd43bdf3044",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "order_purchase_timestamp",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 801,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "d45b26d2-6311-4020-b3d1-5c233ebb0662",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "order_approved_at",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 802,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "1572bdd7-b309-4770-83ea-78e5c70355e4",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "order_delivered_carrier_date",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 803,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "a8755dde-62d2-43f7-9441-79f63bc8000b",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "order_delivered_customer_date",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 804,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "b508e9c5-1a4d-4ee8-80de-287cde2a2b8b",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "order_estimated_delivery_date",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 805,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "c256a124-3345-4990-a3c8-36c5de331d0c",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "geolocation_zip_code_prefix",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 806,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "BIGINT",
+                            "uuid": "c0270e84-1de9-470c-b260-937a614f607d",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "lat",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 807,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "0fc75d2a-87fc-4b45-844c-50836678a2e4",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "column_name": "lon",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 808,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 28,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "8b5ef219-3c04-4575-bef4-2464ea79d501",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "order_purchase_timestamp",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:42"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 35,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 28,
+                            "uuid": "1c577bf0-7743-4e7d-ab1b-d60db2099327",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 28, \"database_name\": \"warehouse\"}",
+                "schema": "public",
+                "sql": null,
+                "table_name": "orders_locations",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "column_name": "order_purchase_timestamp",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 763,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "b2b547d0-98fc-4e59-b804-3361476c95e5",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "column_name": "y",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 764,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "BIGINT",
+                            "uuid": "40baf310-b4cf-4a9b-a773-243ed3754e8f",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "column_name": "yhat",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 765,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "a599379d-b753-45eb-b124-93dbac6a82d7",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "column_name": "yhat_upper",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 766,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "81463a43-3c86-4855-94a4-b4a5edc48fa0",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "column_name": "yhat_lower",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 767,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "d1c08673-d981-4811-9364-df87f192b6ca",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "column_name": "seasonality",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 768,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "427150df-7192-45e7-8421-b6dc14b29831",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "column_name": "trend",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 769,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "7f8f1b17-626f-4795-bb2b-4ca98ce5ed2d",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "order_purchase_timestamp",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:11:35"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 31,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 24,
+                            "uuid": "517498dd-2b9b-4af5-ad7f-13e9ee3f23c2",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 24, \"database_name\": \"warehouse\"}",
+                "schema": "public",
+                "sql": null,
+                "table_name": "fit",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "column_name": "index",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 777,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 26,
+                            "type": "BIGINT",
+                            "uuid": "2e03c47f-6b8b-43b8-903a-17acbb077f21",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "column_name": "order_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 778,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 26,
+                            "type": "TEXT",
+                            "uuid": "d1e91158-1d4d-4544-a65a-7f6307a64584",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "column_name": "customer_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 779,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 26,
+                            "type": "TEXT",
+                            "uuid": "c37d7c3a-d1ce-4a1a-8a9c-737d55ad2f3a",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "column_name": "order_status",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 780,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 26,
+                            "type": "TEXT",
+                            "uuid": "6e7787ef-4f37-4ec7-8d5d-502acd418c8a",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "column_name": "order_purchase_timestamp",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 781,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 26,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "18e8f309-7d30-41a1-ac65-6a8ac44801a9",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "column_name": "order_approved_at",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 782,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 26,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "c50aa942-a85b-4040-8bbd-e675df4a5927",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "column_name": "order_delivered_carrier_date",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 783,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 26,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "2050322a-a39b-4f47-8f8c-b4e607036279",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "column_name": "order_delivered_customer_date",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 784,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 26,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "81820a09-3e1b-4607-ac04-08d8670d1443",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "column_name": "order_estimated_delivery_date",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 785,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 26,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "855cadc4-6425-451f-b999-83e671e6ef0d",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "column_name": "customer_unique_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 786,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 26,
+                            "type": "TEXT",
+                            "uuid": "05d42638-7ddb-4a5d-a642-60dce72c27f0",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "column_name": "customer_zip_code_prefix",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 787,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 26,
+                            "type": "BIGINT",
+                            "uuid": "e9016b31-2d23-49b7-886d-da2f6830bfb5",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "column_name": "customer_city",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 788,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 26,
+                            "type": "TEXT",
+                            "uuid": "d7978df0-f361-4ddb-b3d5-4fa0ec8e6347",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "column_name": "customer_state",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 789,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 26,
+                            "type": "TEXT",
+                            "uuid": "868faaf3-27bc-4557-bbb3-ae4e05c8c5c8",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "column_name": "returing",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 790,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 26,
+                            "type": "INTEGER",
+                            "uuid": "8862d38f-a199-44ff-ad27-575a1e06acc6",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "order_purchase_timestamp",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:19:15"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 33,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 26,
+                            "uuid": "53096793-9147-4980-837c-fc4649f3a9e4",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 26, \"database_name\": \"warehouse\"}",
+                "schema": "public",
+                "sql": null,
+                "table_name": "customers",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:35"
+                            },
+                            "column_name": "index",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 791,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 27,
+                            "type": "TEXT",
+                            "uuid": "49d8477d-5a11-4ae8-9552-ed51c2fb3790",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:35"
+                            },
+                            "column_name": "number_of_customers",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:35"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 792,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 27,
+                            "type": "BIGINT",
+                            "uuid": "aa373402-8cd3-49ce-9c0c-5e9b8497e7aa",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-04-17T16:21:35"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-04-17T16:21:35"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 34,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 27,
+                            "uuid": "cb43b240-63d4-451f-9731-36394404e544",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 27, \"database_name\": \"warehouse\"}",
+                "schema": "public",
+                "sql": null,
+                "table_name": "group_by_order_count_result",
+                "template_params": null
+            }
+        }
+    ]
+}

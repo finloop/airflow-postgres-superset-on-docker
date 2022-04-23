@@ -1,0 +1,16 @@
+name: airflow-postgres-superset-on-docker
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - airflow=2.2.5
+  - apache-airflow=2.2.5
+  - apache-airflow-providers-postgres=4.1.0
+  - black=21.12b0
+  - python=3.8.13
+  - matplotlib
+  - pip:
+    - pandas==1.4.2
+    - scikit-learn==1.0.2
+    - scipy==1.8.0
+    - ThymeBoost
