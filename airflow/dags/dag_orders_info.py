@@ -75,8 +75,8 @@ def orders_info_dag():
     def order_info(order, product_name):
         import pandas as pd
     
-        order.merge(product_name, on="product_id")
-        return order_info
+        orders_info = order.merge(product_name, on="product_id")
+        return orders_info
     
     
     orders_fix=fix_date(orders=orders.output)

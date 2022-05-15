@@ -45,8 +45,7 @@ def order_items_reviews_dag():
         import pandas as pd
         import numpy as np
         
-        ordr_itms = order_items("order_id","product_id","seller_id","price","freight_value")
-        
+        ordr_itms = order_items.drop(["order_item_id","shipping_limit_date"],axis=1)
         return ordr_itms
 
     @task
