@@ -1,0 +1,399 @@
+{
+    "dashboards": [
+        {
+            "__Dashboard__": {
+                "css": "",
+                "dashboard_title": "Order Reviews",
+                "description": null,
+                "json_metadata": "{\"show_native_filters\": true, \"color_scheme\": \"\", \"refresh_frequency\": 0, \"expanded_slices\": {}, \"label_colors\": {}, \"timed_refresh_immune_slices\": [], \"default_filters\": \"{}\", \"chart_configuration\": {}, \"remote_id\": 14}",
+                "position_json": "{\"CHART-7N9Ryl1_PB\":{\"children\":[],\"id\":\"CHART-7N9Ryl1_PB\",\"meta\":{\"chartId\":406,\"height\":67,\"sliceName\":\"Order Review Comments per Score Count\",\"uuid\":\"6bf2cedf-e801-4fb0-b196-16355a23fe2f\",\"width\":6},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-neuzSkVV0\"],\"type\":\"CHART\"},\"CHART-HzZZpl7hdW\":{\"children\":[],\"id\":\"CHART-HzZZpl7hdW\",\"meta\":{\"chartId\":407,\"height\":67,\"sliceName\":\"Order Review Score Count\",\"uuid\":\"39da8392-1335-4598-8e52-939e5936b974\",\"width\":6},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-neuzSkVV0\"],\"type\":\"CHART\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"GRID_ID\":{\"children\":[\"ROW-neuzSkVV0\"],\"id\":\"GRID_ID\",\"parents\":[\"ROOT_ID\"],\"type\":\"GRID\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"Order Reviews\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-neuzSkVV0\":{\"children\":[\"CHART-7N9Ryl1_PB\",\"CHART-HzZZpl7hdW\"],\"id\":\"ROW-neuzSkVV0\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"}}",
+                "slices": [
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.order_items_reviews",
+                            "datasource_type": "table",
+                            "id": 406,
+                            "params": "{\"adhoc_filters\": [], \"bar_stacked\": false, \"bottom_margin\": \"auto\", \"color_scheme\": \"supersetColors\", \"columns\": [], \"datasource\": \"24__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"review_creation_date\", \"groupby\": [\"review_score\"], \"metrics\": [{\"aggregate\": \"COUNT\", \"column\": {\"certification_details\": null, \"certified_by\": null, \"column_name\": \"review_comment_message\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 768, \"is_certified\": false, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"TEXT\", \"type_generic\": 1, \"verbose_name\": null, \"warning_markdown\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"COUNT(review_comment_message)\", \"optionName\": \"metric_sxyxfpvtgns_9598xxbun18\", \"sqlExpression\": null}], \"order_bars\": true, \"order_desc\": false, \"row_limit\": 10000, \"show_bar_value\": true, \"show_legend\": false, \"slice_id\": 406, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 406, \"datasource_name\": \"order_items_reviews\", \"schema\": \"public\", \"database_name\": \"Warehouse\"}",
+                            "query_context": "{\"datasource\":{\"id\":24,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"granularity\":\"review_creation_date\",\"filters\":[],\"extras\":{\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"review_score\"],\"metrics\":[{\"aggregate\":\"COUNT\",\"column\":{\"certification_details\":null,\"certified_by\":null,\"column_name\":\"review_comment_message\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":768,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"TEXT\",\"type_generic\":1,\"verbose_name\":null,\"warning_markdown\":null},\"expressionType\":\"SIMPLE\",\"hasCustomLabel\":false,\"isNew\":false,\"label\":\"COUNT(review_comment_message)\",\"optionName\":\"metric_sxyxfpvtgns_9598xxbun18\",\"sqlExpression\":null}],\"annotation_layers\":[],\"row_limit\":10000,\"timeseries_limit\":0,\"order_desc\":false,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Order Review Comments per Score Count",
+                            "viz_type": "dist_bar"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "public.order_items_reviews",
+                            "datasource_type": "table",
+                            "id": 407,
+                            "params": "{\"adhoc_filters\": [], \"bar_stacked\": false, \"bottom_margin\": \"auto\", \"color_scheme\": \"bnbColors\", \"columns\": [], \"datasource\": \"24__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"review_creation_date\", \"groupby\": [\"review_score\"], \"metrics\": [{\"aggregate\": \"COUNT\", \"column\": {\"certification_details\": null, \"certified_by\": null, \"column_name\": \"review_score\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 766, \"is_certified\": false, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"BIGINT\", \"type_generic\": 0, \"verbose_name\": null, \"warning_markdown\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"COUNT(review_score)\", \"optionName\": \"metric_n2egf5cuahc_5omu91qyv5\", \"sqlExpression\": null}], \"order_bars\": true, \"order_desc\": false, \"row_limit\": 50000, \"show_bar_value\": true, \"show_legend\": false, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 407, \"datasource_name\": \"order_items_reviews\", \"schema\": \"public\", \"database_name\": \"Warehouse\"}",
+                            "query_context": "{\"datasource\":{\"id\":24,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"granularity\":\"review_creation_date\",\"filters\":[],\"extras\":{\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"review_score\"],\"metrics\":[{\"expressionType\":\"SIMPLE\",\"column\":{\"id\":766,\"column_name\":\"review_score\",\"verbose_name\":null,\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"is_dttm\":false,\"type\":\"BIGINT\",\"type_generic\":0,\"python_date_format\":null,\"is_certified\":false,\"certified_by\":null,\"certification_details\":null,\"warning_markdown\":null},\"aggregate\":\"COUNT\",\"sqlExpression\":null,\"isNew\":false,\"hasCustomLabel\":false,\"label\":\"COUNT(review_score)\",\"optionName\":\"metric_n2egf5cuahc_5omu91qyv5\"}],\"annotation_layers\":[],\"row_limit\":50000,\"timeseries_limit\":0,\"order_desc\":false,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Order Review Score Count",
+                            "viz_type": "dist_bar"
+                        }
+                    }
+                ],
+                "slug": null
+            }
+        }
+    ],
+    "datasources": [
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "column_name": "product_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 771,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "TEXT",
+                            "uuid": "325bd4de-e09f-4d2e-8734-6a95a429ab7c",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "column_name": "seller_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 772,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "TEXT",
+                            "uuid": "ed5672db-a7d9-4343-acaa-ce6f9631edf1",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "column_name": "price",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 773,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "5063017b-f435-4510-a247-59ca5dc0dcc1",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "column_name": "freight_value",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 774,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "648f5aa4-1e70-497d-9a23-db1f01735ff7",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "column_name": "index",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 763,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "BIGINT",
+                            "uuid": "0e99bb64-59ca-489e-be8a-6faac32c65f3",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "column_name": "review_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 764,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "TEXT",
+                            "uuid": "51c3aa76-6188-4986-aab4-0ae9f47237de",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "column_name": "order_id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 765,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "TEXT",
+                            "uuid": "20470882-1ed9-44a7-aad5-d8512993883f",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "column_name": "review_score",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 766,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "BIGINT",
+                            "uuid": "ab6bc171-463a-4ced-8761-25785763477c",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "column_name": "review_comment_title",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 767,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "TEXT",
+                            "uuid": "6c4afeb9-73e9-4f59-8a41-fb33b8d8c878",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "column_name": "review_comment_message",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 768,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "TEXT",
+                            "uuid": "c5a509ea-4f93-433b-a963-a3d0e3c65519",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "column_name": "review_creation_date",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 769,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "7702a436-6ba4-4f8f-98b0-32d47e59da80",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "column_name": "review_answer_timestamp",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "extra": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 770,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "uuid": "4abd0469-5a47-4ef0-ad77-ff6b7a50af2b",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "review_creation_date",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2022-05-14T10:34:22"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 31,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 24,
+                            "uuid": "4b29eecc-26a6-4a02-be47-7135ccc297ea",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 24, \"database_name\": \"Warehouse\"}",
+                "schema": "public",
+                "sql": null,
+                "table_name": "order_items_reviews",
+                "template_params": null
+            }
+        }
+    ]
+}
