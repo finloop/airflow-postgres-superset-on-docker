@@ -35,7 +35,7 @@ Después de ejecutarlos, debe colocar los datos de ejemplo en la base de datos. 
 python init-postgres.py
 ```
 
-### Sitios webW
+### Sitios web
 
 *   [pgAdmin](http://localhost:5050)
 *   [Corriente de aire](http://localhost:5053)
