@@ -34,7 +34,7 @@ After running them, you should put the sample data in the database. We do this:
 python init-postgres.py
 ```
 
-### WebsitesW
+### Web services
 
 *   [pgAdmin](http://localhost:5050)
 *   [Airflow](http://localhost:5053)
