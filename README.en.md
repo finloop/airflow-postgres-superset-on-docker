@@ -10,8 +10,7 @@
     cd airflow-postgres-superset-on-docker
 
 To run the services you will need the id of the current user, which should be placed
-in a file `.env` and assign to a variable `AIRFLOW_UID`. On linux id of the current user
-can be downloaded by the command:
+in a file `.env` and assign to a variable `AIRFLOW_UID`. On linux, issue following command to get users id:
 
 ```sh
 id -u
