@@ -2,7 +2,7 @@
 
 ## Architektura
 
-![](docs/Architecture.png)
+![](docs/Architecture.jpg)
 
 ## Uruchamianie
 

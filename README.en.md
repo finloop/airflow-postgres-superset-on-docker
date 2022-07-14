@@ -2,7 +2,7 @@
 
 ## Architecture
 
-![](docs/Architecture.png)
+![](docs/Architecture.jpg)
 
 ## Run
 

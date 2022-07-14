@@ -2,7 +2,7 @@
 
 ## Arquitectura
 
-![](docs/Architecture.png)
+![](docs/Architecture.jpg)
 
 ## Correr
 
